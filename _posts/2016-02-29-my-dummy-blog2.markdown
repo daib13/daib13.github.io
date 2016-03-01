@@ -1,25 +1,30 @@
 ---
 layout: post
-title:  "My dummy blog 2"
-date:   2016-02-29 15:07:26 +0800
-categories: jekyll update
+title:  "一个数学家的辩白"
+date:   2015-11-18 15:07:26 +0800
+categories: Reading
+abstract: 当哈代在进行这本书或者说这篇文章的创作的时候，62岁的他意识到自己并不是在写数学本身，而只不过是在写与数学有关的东西，此时的他是泄气的。正如文学家瞧不起文学评论家，艺术家瞧不起艺术评论家一样，数学家理所当然地会瞧不起这些“写和数学有关的东西”的人。在这个层面上，作为大数学家的哈代是泄气的。
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+<p style="text-align:left">
+作者哈代简介：<br/>
+哈代（Godfrey Harold，1877-1947）13岁进入以培养数学家著称的温切斯特学院。1896年去剑桥三一学院，并于1900年在剑桥获得一个职位。同年得史密斯奖。以后，在英国牛津大学、剑桥大学任教授。他和J.E.李特尔伍德长期进行合作，写出了近百篇论文，在丢番图逼近，堆垒数论、黎曼ξ函数、三角级数、不等式、级数与积分等领域作出了很大贡献，同时是回归数现象发现者。在20世纪上半叶建立了具有世界水平的英国分析学派。
+</p>
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+<p style="text-align:left">
+泄气却又自负的作者<br/>
+当哈代在进行这本书或者说这篇文章的创作的时候，62岁的他意识到自己并不是在写数学本身，而只不过是在写与数学有关的东西，此时的他是泄气的。正如文学家瞧不起文学评论家，艺术家瞧不起艺术评论家一样，数学家理所当然地会瞧不起这些“写和数学有关的东西”的人。在这个层面上，作为大数学家的哈代是泄气的。<br/>
+同时哈代又是自负的，他的自负来自于两个方面：一是对于自己这一生所从事的学科，也就是数学本身的自负；另一方面是他认为自己（曾经）是一个优秀的数学家，以至于他有资格来对自己所从事的学科进行一些辩白，即使这些辩白或许是不必要的。
+</p>
 
-Jekyll also offers powerful support for code snippets:
+<p style="text-align:left">
+哈代抛出的两个问题<br/>
+	1)人们为什么做自己的正在做工作？<br/>
+	这个问题是较简单的，哈代给出了两种回答：第一个答案是“我做我所做的事情是因为，这是我唯一完全能做好的事情。”然而哈代认为该回答并不普适，“只有大概百分之五的人有资格做出这样的辩护，因为事实上大多数人根本做不好任何的事情。”<br/>
+	对于剩下的人，哈代给出了第二个答案：“没有任何事情我能做的特别好，我干我所做的事情，是因为它与我不期而遇。我真的没有机会去做任何别的事情。”<br/>
+	我不得不承认，哈代给出的答案几乎是无可辩驳的。幸运的是，我大概还处在那百分之五的人的边缘，还在寻找着一两件能做好的事情，这对我来说是有意义的，甚至是乐观的。<br/><br/>
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: http://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+	2)人们所做的工作是否值得去做？<br/>
+	很不幸，这个问题太难回答，而且答案往往令人泄气。哈代似乎并不能找到一个很好的回答来让自己因此而变得高兴起来。他只能不那么肯定地说明他的观点的第一步：数学是无害的。这件事并不容易，因为并不是所有的学科都是无害的（虽然有些学科是有用的，但并不表示其无害）。至于第二步——数学可能是有用的，哈代从三个方面进行了阐述：数学的美、数学的持久性和数学的重要性。<br/>
+	数学是一种智力的活动，从这个角度上来说，进行数学的创作（我暂且称之为创作）和进行诗歌、音乐、舞蹈等艺术创作是一样的，都可以带来美感和精神上的愉悦。这种美感甚至不需要用任何的语言来进行阐述，人们可以轻易地从最简单的图形表示中发现这种美并从中感受到愉悦，从这个角度上来说，数学是持久的，甚至比用文字或者其他东西进行传播的形式更加持久。至于重要性，哈代必须向他并不喜欢的应用数学做出一定的妥协，数学的思想可以为其他领域（未必是直接的应用）提供一些有意义的想法。
+</ul>
+</p>
