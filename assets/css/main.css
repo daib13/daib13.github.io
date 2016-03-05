@@ -2177,6 +2177,12 @@
 				background-color: #e8edec;
 			}
 
+			#main .blog_sample {
+				padding: 1em;
+				background-image: url("../../images/blog_bg.jpg");
+				background-size:100% 100%; 
+			}
+
 /* Wide */
 
 	@media screen and (min-width: 961px) and (max-width: 1880px) {
