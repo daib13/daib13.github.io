@@ -1553,9 +1553,10 @@
 	body {
 		background: #fff;
 		font-family: 'Source Sans Pro', sans-serif;
+		/*font-family: "Times New Roman", Georgia, Serif;*/
 		font-size: 19pt;
 		font-weight: 300;
-		line-height: 1.75em;
+		line-height: 1.5em;
 		color: #888;
 	}
 
@@ -1572,6 +1573,7 @@
 
 	input, textarea, select {
 		font-family: 'Source Sans Pro', sans-serif;
+		/*font-family: "Times New Roman", Georgia, Serif;*/
 		font-size: 19pt;
 		font-weight: 300;
 		line-height: 1.75em;
@@ -2224,7 +2226,7 @@
 			}
 
 			#main section.cover {
-				padding: 5em 0;
+				padding: 1.5em 0;
 			}
 
 	}
