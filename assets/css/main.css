@@ -1749,7 +1749,7 @@
 	.idcard {
 		border: 2px dashed #A2CD5A;
 		border-radius: 10px;
-		margin: 6px;
+		margin: 10px 2px 10px 2px;
 	}
 
 	.idname {
@@ -1789,6 +1789,7 @@
 		overflow: hidden;
 		border-radius: 8px;
 		vertical-align: middle;
+		margin: 5px 0 5px 0;
 	}
 
 	.idintro {
