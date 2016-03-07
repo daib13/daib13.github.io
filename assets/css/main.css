@@ -1745,6 +1745,64 @@
 				width: auto;
 			}
 
+/* ID card */
+	.idcard {
+		border: 2px dashed #A2CD5A;
+		border-radius: 10px;
+		min-width: 408px;
+		margin: 6px;
+	}
+
+	.idname {
+		padding: 0.25em 0.25em 0 0.25em;
+		text-align: left;
+		font-family: "Times New Roman", Georgia, Serif;
+		margin: 0 0 0 0;
+		color: #000000;
+		vertical-align: bottom;
+	}
+
+	.idline {
+		height:1px;
+		border:none;
+		border-top:1px dashed #777777;
+		margin: 0 0.25em 0.25em 0.25em;
+	}
+
+	.idimageplusintro {
+		margin: 0.25em 0.25em 0.25em 0.25em;
+		width: 100%;
+		height: 100px;
+	}
+
+	.idimageframe {
+		position: absolute;
+		float: left;
+		height: 100px;
+		width: 100px;
+		border: 1px solid #A2CD5A;
+		border-radius: 8px;
+	}
+
+	.idimage {
+		max-width: 98px;
+		max-height: 98px;
+		overflow: hidden;
+		border-radius: 8px;
+		vertical-align: middle;
+	}
+
+	.idintro {
+		height: 100%;
+		margin-left: 105px;
+		margin-right: 5px;
+		font-family: "Times New Roman", Georgia, Serif;
+		line-height: 1.2em;
+		color: #000000;
+		padding: 0 2px 0 2px;
+	}
+
+
 /* List */
 
 	ul.default {
