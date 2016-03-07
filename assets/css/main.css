@@ -1749,7 +1749,6 @@
 	.idcard {
 		border: 2px dashed #A2CD5A;
 		border-radius: 10px;
-		min-width: 408px;
 		margin: 6px;
 	}
 
