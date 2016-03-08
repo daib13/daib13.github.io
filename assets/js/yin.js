@@ -2,7 +2,7 @@ var yinState = 0;
 function showYinFunc() {
 	if(yinState == 0) {
 		$('#yinImg').attr('src', '/images/yinzhangpost.jpg');
-		$('#yinDiscription').html('Scan the QR code with your to follow her WeChat subscription. She\'s a great beauty you\'ll never know enough about');
+		$('#yinDiscription').html('Scan the QR code to follow her WeChat subscription. She\'s a great beauty you\'ll never know enough about');
 		yinState = 1;
 	}
 	else {
