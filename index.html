@@ -119,7 +119,7 @@ layout: index
 <!-- Contact -->
 <section id="contact" class="four">
     <div class="container">
-        <header>
+        <header class="friends">
             <h2>Friends Links</h2>
         </header>
 
@@ -149,7 +149,7 @@ layout: index
                     <hr class="idline"/>
                     <div class="idimageplusintro">
                         <div class="idimageframe"><img src="/images/xingfenghe.jpg" alt="Xingfeng He" class="idimage"/></div>
-                        <div class="idintro">Used to be my roomate. Ph.D. candidate in Department of Materials Science and Engineering at University of Maryland.</div>
+                        <div class="idintrobox"><div class="idintro">Ph.D. candidate in Department of Materials Science and Engineering at University of Maryland.</div></div>
                     </div>
                 </div>
                 <div class="idcard">
@@ -157,7 +157,7 @@ layout: index
                     <hr class="idline"/>
                     <div class="idimageplusintro">
                         <div class="idimageframe"><img src="/images/xiaogangwang.jpg" alt="Xiaogang Wang" class="idimage"/></div>
-                        <div class="idintro">Graduated from Nanjing University. Front end developer.</div>
+                        <div class="idintrobox"><div class="idintro">Graduated from Nanjing University. Front end developer of Meituan.</div></div>
                     </div>
                 </div>
             </div>
@@ -167,18 +167,20 @@ layout: index
                     <hr class="idline"/>
                     <div class="idimageplusintro">
                         <div class="idimageframe"><img src="/images/wenhanzhang.jpg" alt="Wenhan Zhang" class="idimage"/></div>
-                        <div class="idintro">Used to be my roomate. Ph.D. candidate in the Department of Physics and Astronomy, Rutgers University.</div>
+                        <div class="idintrobox"><div class="idintro">Ph.D. candidate in the Department of Physics and Astronomy, Rutgers University.</div></div>
                     </div>
                 </div>
                 <div class="idcard">
-                    <a href="#"><p class="idname">Yin Zhang</p></a>
+                    <p class="idname" onclick="showYinFunc()">Yin Zhang</p>
                     <hr class="idline"/>
                     <div class="idimageplusintro">
-                        <div class="idimageframe"><img src="/images/yinzhang.jpg" alt="Yin Zhang" class="idimage" /></div>
-                        <div class="idintro"><p style="valign:middle">Ph.D. candidate in the Department of Architecture, Tsinghua Unviersity.</p></div>
+                        <div class="idimageframe"><img src="/images/yinzhang.jpg" alt="Yin Zhang" class="idimage" id="yinImg"/></div>
+                        <div class="idintrobox"><div class="idintro" id="yinDiscription">Ph.D. candidate in the School of Architecture, Tsinghua Unviersity.</div></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<script src="/assets/js/yin.js"></script>
