@@ -1698,6 +1698,11 @@
 
 /* Image */
 
+	.fit {
+		display: block;
+		width: 100%;
+	}
+
 	.image {
 		display: inline-block;
 		border: 0;
