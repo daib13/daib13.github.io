@@ -12,7 +12,7 @@ abstract: 围棋，以及所有其它的棋类游戏，终究不过是一套完�
 
 <ul style="text-align:left;list-style:circle;list-style-position:inside">
 	<li style="color:red">机器能否战胜人类</li>
-	<li>机器还不能做什么</li>
+	<li><a href="http://daib13.github.io/academic/2016/03/12/academic2.html">机器还不能做什么</a></li>
 	<li>当我谈人工智能时我在说什么</li>
 	<li>漫话形上学、科学、技术与数学</li>
 </ul>
