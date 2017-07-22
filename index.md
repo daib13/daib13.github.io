@@ -15,3 +15,22 @@ layout: default
 *   Bin Dai, Yu Wang, Gang Hua, John Aston, and David Wipf, "<a href="https://arxiv.org/abs/1706.05148">Veiled Attributes of the Variational Autoencoder</a>,"&nbsp;arXiv:1706.05148, 2017.
 
 *   Yu Wang, Bin Dai, Gang Hua, John Aston, and David Wipf, "Green Generative Modeling: Recycling Dirty Data using Recurrent Variational Autoencoders," Uncertainty in Artificial Intelligence (UAI), 2017 (to appear).
+
+# [](#header-1)Experiences
+
+<dl>
+<dt>2015.01~Now</dt>
+<dd>Intern in MSRA.</dd>
+<dt>2013.08~Now</dt>
+<dd>Ph.D. candidate of Tsinghua University.</dd>
+<dt>2012.07~2012.08</dt>
+<dd>Visiting scholar in University of California Santa Cruz.</dd>
+<dt>2009.08~2013.07</dt>
+<dd>Bachelor in Physics of Tsinghua University.</dd>
+</dl>
+
+# [](#header-1)Awards and Honors
+*   Best Presentation Award of the Student TechFest MSRA, 2016.
+*   Scholarship of Tsinghua Xuetang Talents Program, 2012,2013.
+*   Sports Scholarship of Tsinghua University. 2012.
+*   Comprehensive scholarship of Tsinghua University (second prize) 2010,2011.
