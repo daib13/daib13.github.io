@@ -2,6 +2,9 @@
 layout: default
 ---
 
+# [](#header-1)About Me
+I am currently a Ph.D. student of the Institue for Advanced Study (IAS), Tsinghua University (THU). I am also under the joint Ph.D. program between THU and Microsoft Research Asia (MSRA). 
+
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 [Link to another page](another-page).
