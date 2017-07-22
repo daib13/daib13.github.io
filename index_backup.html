@@ -1,0 +1,186 @@
+---
+layout: index
+---
+
+<!-- Intro -->
+<section id="top" class="one dark cover">
+    <div class="container">
+        <header>
+            <h2 class="alt">BIN-GO</h2>
+            <p style="text-align:left">
+                Hello, I'm a Ph.D candidate of the Institute of Advanced Study(IAS), Tsinghua University(THU);
+                an intern of the Microsoft Research Asia (MSRA). My research interests are computer vision
+                and deep learning. <a href="#about" id="intro-portfolio-link">Read more about me</a>.
+            </p>
+        </header>
+
+    </div>
+</section>
+
+<!-- Portfolio -->
+<section id="portfolio" class="two">
+    <div class="container">
+        <div class="row">
+            <div class="4u 12u$(mobile)">
+                <a href="#" class="image fit"><img src="images/paper_reading.jpg" alt="" /></a>
+                <header>
+                    <h3>Academic</h3>
+                </header>
+                {% for category in site.categories %}
+                    {% if category.first == "Academic" %}
+                        {% for post in category.last limit:5%}
+                            <div class="blog_sample">
+                                <a href="{{ post.url }}">{{ post.title }}</a>
+                                <p style="text-align:left">{{ post.abstract }}</p>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="4u 12u$(mobile)">
+                <a href="#" class="image fit"><img src="./images/library.jpg" alt="" /></a>
+                <header>
+                    <h3>Reading</h3>
+                </header>
+                {% for category in site.categories %}
+                    {% if category.first == "Reading" %}
+                        {% for post in category.last limit:5%}
+                            <div class="blog_sample">
+                                <a href="{{ post.url }}">{{ post.title }}</a>
+                                <p style="text-align:left">{{ post.abstract }}</p>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="4u 12u$(mobile)">
+                <a href="#" class="image fit"><img src="./images/poem.jpg" alt="" /></a>
+                <header>
+                    <h3>Poems</h3>
+                </header>
+                {% for category in site.categories %}
+                    {% if category.first == "Poem" limit:5%}
+                        {% for post in category.last %}
+                            <div class="blog_sample">
+                                <a href="{{ post.url }}">{{ post.title }}</a>
+                                <p style="text-align:center">{{ post.abstract }}</p>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Me -->
+<section id="about" class="three">
+    <div class="container">
+        <header>
+            <h2>About Me</h2>
+        </header>
+        <p style="text-align:left">
+            I'm a Ph.D candidate of the Institute For Advanced Study (IAS), Tsinghua University(THU);
+            an intern in Microsoft Research Asia (MSRA).
+        </p>
+
+        <h4>Education</h4>
+        <p style="text-align:left">
+            I got my B.S. in Tsinghua University in 2013. I majored in physics during my undergraduate study
+            and did some research in astrophysics. My first seminar project was about the planet migration.
+            Under the supervision of Prof. Douglas Lin, I explained part of the reasons why planets in the same solar system
+            resonant with each other. Another project I focused on was the gas depletion of Hot Jupiters.
+            My bachelor's thesis is about fitting the light curves of supernovae Ia, which is conducted under the
+            guidance of Prof. Xiaofeng Wang.<br />
+            After I graduated, I became a Ph.D candidate in IAS, THU. In 2014, I switched my research realm
+            to computer science. Since then, I've been researching in the field of computer vision and deep learning.
+            Currently, I'm working on projects about photo selection.<br />
+        </p>
+
+        <h4>Interests</h4>
+        <p style="text-align:left">
+            I have quite a lot of hobbies, like soccer, reading, Chinese poems.
+            Moreover, I'm always eager to experience new things and find new life
+            styles.<br /><br />
+            <em style="font-weight:900">Soccer: </em><br />I served as a member of the department soccer team and was the captain of it
+            from 2011.04 to 2013.06. In 2014.08, I joined another soccer team called Lingpao Tsinghua, members of
+            which are all alumni of THU. I'm a soccer fan of Arsenal which is a club in the Premier League.<br /><br />
+            <em style="font-weight:900">Chinese poems: </em><br />Tang poetry and Song poetry are both great treasure for the Chinese.
+            I learned some rules and forms of classical poetic composition in 2010. Sometimes I write some Chinese poems,
+            though not good ones. I'll post my poems in the blog, of course in Chinese.<br /><br />
+            <em style="font-weight:900">Reading: </em><br />Reading helps people experience the world they've never lived in.
+            I love reading all kinds of different books. Currently I'm focusing on pholosophy and artistics. However, as Schopenhauer's
+            pointed out, simply reading may be useless. It's thinking rather than reading that helps us gain big pictures of the whole
+            world. So besides reading, I also like writing some comments. I'll post my reading comments in my blog, mostly in Chinese.<br /><br />
+        </p>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="four">
+    <div class="container">
+        <header class="friends">
+            <h2>Friends Links</h2>
+        </header>
+
+        <!--div class="row">
+            <div class="6u 12u$(mobile)">
+                <article class="item">
+                    <a href="http://wenhanzhang.com/" class="image fit"><img src="images/wenhanzhang.jpg" alt="" /></a>
+                    <header>
+                        <h3>Wenhan Zhang</h3>
+                    </header>
+                </article>
+            </div>
+            <div class="6u 12u$(mobile)">
+                <article class="item">
+                    <a href="http://www.xingfenghe.com/" class="image fit"><img src="images/xingfenghe.jpg" alt="" /></a>
+                    <header>
+                        <h3>Xingfeng He</h3>
+                    </header>
+                </article>
+            </div>
+        </div-->
+
+        <div class="row">
+            <div class="6u 12u$(mobile)">
+                <div class="idcard">
+                    <a href="http://www.xingfenghe.com/"><p class="idname">Xingfeng He</p></a>
+                    <hr class="idline"/>
+                    <div class="idimageplusintro">
+                        <div class="idimageframe"><img src="/images/xingfenghe.jpg" alt="Xingfeng He" class="idimage"/></div>
+                        <div class="idintrobox"><div class="idintro">Ph.D. candidate in Department of Materials Science and Engineering at University of Maryland.</div></div>
+                    </div>
+                </div>
+                <div class="idcard">
+                    <a href="http://slashhuang.github.io"><p class="idname">Xiaogang Wang</p></a>
+                    <hr class="idline"/>
+                    <div class="idimageplusintro">
+                        <div class="idimageframe"><img src="/images/xiaogangwang.jpg" alt="Xiaogang Wang" class="idimage"/></div>
+                        <div class="idintrobox"><div class="idintro">Graduated from Nanjing University. Front end developer of Meituan.</div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="6u 12u$(mobile)">
+                <div class="idcard">
+                    <a href="http://www.wenhanzhang.com/"><p class="idname">Wenhan Zhang</p></a>
+                    <hr class="idline"/>
+                    <div class="idimageplusintro">
+                        <div class="idimageframe"><img src="/images/wenhanzhang.jpg" alt="Wenhan Zhang" class="idimage"/></div>
+                        <div class="idintrobox"><div class="idintro">Ph.D. candidate in the Department of Physics and Astronomy, Rutgers University.</div></div>
+                    </div>
+                </div>
+                <div class="idcard">
+                    <p class="idname" onclick="showYinFunc()">Yin Zhang</p>
+                    <hr class="idline"/>
+                    <div class="idimageplusintro">
+                        <div class="idimageframe"><img src="/images/yinzhang.jpg" alt="Yin Zhang" class="idimage" id="yinImg"/></div>
+                        <div class="idintrobox"><div class="idintro" id="yinDiscription">Ph.D. candidate in the School of Architecture, Tsinghua Unviersity.</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="/assets/js/yin.js"></script>
