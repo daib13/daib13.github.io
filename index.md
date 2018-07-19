@@ -13,7 +13,7 @@ I completed my BS in physics at Tsinghua University in 2013. I worked with <a hr
 # [](#header-1)Publications
 
 ## [](#header-2)2018
-*   Bin Dai, Yu Wang, Gang Hua, John Aston, and David Wipf, "Connections with Robust PCA and the Role of Emergent Sparsity in Variational Autoencoder Models," Journal of Machine Learning Research (JMLR), 2018 (to appear).//[poster]
+*   Bin Dai, Yu Wang, Gang Hua, John Aston, and David Wipf, "Connections with Robust PCA and the Role of Emergent Sparsity in Variational Autoencoder Models," Journal of Machine Learning Research (JMLR), 2018 (to appear).&nbsp;[<a href="/posters/icml2018_compressing_poster.pdf">poster</a>] [<a href="/posters/icml2018_compressing_slides.pdf">slides</a>] [<a href="https://github.com/zhuchen03/VIBNet">code</a>] [<a href="/posters/icml2018_compressing_video.mp4">video</a>]
 
 *   Bin Dai, Chen Zhu, Baining Guo, and David Wipf, "<a href="http://proceedings.mlr.press/v80/dai18d/dai18d.pdf">Compressing Neural Networks Using the Variational Information Bottleneck</a>," International Conference on Machine Learning (ICML), 2018
 
