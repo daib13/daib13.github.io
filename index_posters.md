@@ -2,6 +2,4 @@
 layout: poster_list
 ---
 
-# [](#header-1)Category1
-
-Wait for my posters.
+*   <a href="/blogs/20180720_icml2018_compression">Compressing Neural Networks Using the Variational Information Bottleneck</a>
