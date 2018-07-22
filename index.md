@@ -15,13 +15,13 @@ I completed my BS in physics at Tsinghua University in 2013. I worked with <a hr
 ## [](#header-2)2018
 *   Bin Dai, Yu Wang, Gang Hua, John Aston, and David Wipf, "Connections with Robust PCA and the Role of Emergent Sparsity in Variational Autoencoder Models," Journal of Machine Learning Research (JMLR), 2018 (to appear).
 
-*   Bin Dai, Chen Zhu, Baining Guo, and David Wipf, "<a href="http://proceedings.mlr.press/v80/dai18d/dai18d.pdf">Compressing Neural Networks Using the Variational Information Bottleneck</a>," International Conference on Machine Learning (ICML), 2018 &nbsp;[<a href="/posters/icml2018_compressing_poster.pdf">poster</a>] [<a href="/posters/icml2018_compressing_slides.pdf">slides</a>] [<a href="https://github.com/zhuchen03/VIBNet">code</a>] [<a href="/posters/icml2018_compressing_video.mp4">video</a>]
+*   Bin Dai, Chen Zhu, Baining Guo, and David Wipf, "<a href="http://proceedings.mlr.press/v80/dai18d/dai18d.pdf" target="_blank">Compressing Neural Networks Using the Variational Information Bottleneck</a>," International Conference on Machine Learning (ICML), 2018 &nbsp;[<a href="/posters/icml2018_compressing_poster.pdf" target="_blank">poster</a>] [<a href="/posters/icml2018_compressing_slides.pdf" target="_blank">slides</a>] [<a href="https://github.com/zhuchen03/VIBNet" target="_blank">code</a>] [<a href="/posters/icml2018_compressing_video.mp4" target="_blank">video</a>]
 
 ## [](#header-2)2017
 
-*   Bin Dai, Yu Wang, Gang Hua, John Aston, and David Wipf, "<a href="https://arxiv.org/abs/1706.05148">Veiled Attributes of the Variational Autoencoder</a>,"&nbsp;arXiv:1706.05148, 2017.
+*   Bin Dai, Yu Wang, Gang Hua, John Aston, and David Wipf, "<a href="https://arxiv.org/abs/1706.05148" target="_blank">Veiled Attributes of the Variational Autoencoder</a>,"&nbsp;arXiv:1706.05148, 2017.
 
-*   Yu Wang, Bin Dai, Gang Hua, John Aston, and David Wipf, "<a href="http://auai.org/uai2017/proceedings/papers/142.pdf">Green Generative Modeling: Recycling Dirty Data using Recurrent Variational Autoencoders</a>," Uncertainty in Artificial Intelligence (UAI), 2017.
+*   Yu Wang, Bin Dai, Gang Hua, John Aston, and David Wipf, "<a href="http://auai.org/uai2017/proceedings/papers/142.pdf" target="_blank">Green Generative Modeling: Recycling Dirty Data using Recurrent Variational Autoencoders</a>," Uncertainty in Artificial Intelligence (UAI), 2017.
 
 # [](#header-1)Experiences
 

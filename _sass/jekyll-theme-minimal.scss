@@ -107,6 +107,7 @@ th {
 
 img {
   max-width:100%;
+  max-width:480px;
 }
 
 header {
@@ -199,6 +200,15 @@ footer {
   position:fixed;
   bottom:50px;
   -webkit-font-smoothing:subpixel-antialiased;
+}
+
+textarea[disabled] {
+  cursor: not-allowed;
+}
+
+.caption {
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 @media print, screen and (max-width: 1280x) {
