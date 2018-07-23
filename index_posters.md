@@ -4,6 +4,15 @@ title: Posters
 ---
 
 # [](#header-1)My Projects
-*   <a href="/blogs/20180720_icml2018_compression">Compressing Neural Networks Using the Variational Information Bottleneck</a>
+<ul>
+  {% for post in site.categories['projects'] %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
 
 # [](#header-1)Paper Reading
+<ul>
+  {% for post in site.categories['paper_reading'] %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>

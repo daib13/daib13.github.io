@@ -1,9 +1,13 @@
 ---
 layout: poster_list
 title: Compressing Neural Networks Using the Variational Information Bottleneck
+categories: projects
+src: /blogs/20180720_icml2018_compression_imgs
 ---
 
 <h2 align="center">{{page.title}}</h2>
+<p>This poster introduces our work about compressing neural networks in a less formal fashion to help you gain a big picture of our work. For a formal version, please check our <a href="http://proceedings.mlr.press/v80/dai18d/dai18d.pdf" target="_blank">paper</a>. You can also refer to the <a href="https://arxiv.org/abs/1802.10399" target="_blank">arxiv version</a> for more technical details including all the proofs and mathematics.</p>
+
 <h3>1. Outline</h3>
 <ul>
   <li><a href="#background">Background</a></li>
@@ -26,9 +30,9 @@ title: Compressing Neural Networks Using the Variational Information Bottleneck
 In this work, we try to compress the network in all the three aspects. Basically, the proposed method is a pruning method (check <a href="#related">related work</a> for other methods). We have an over-parameterized model. Then we use some kinds of regularization to prune the original model and obtain a much smaller one. In the literature, there are two kinds of pruning methods. The first one only prunes weight connections, as shown in Figure 1 while the second one prunes weight groups or neurons / filters, as shown in Figure 2.</p>
 
 <div align="center">
-  <img width="100%" src="/blogs/20180720_icml2018_compression_imgs/prune_connection.png"/>
+  <img width="100%" src="{{page.src}}/prune_connection.png"/>
   <div class="caption">Figure 1. Illustration of Pruning Weight Connections.</div>
-  <img width="100%" src="/blogs/20180720_icml2018_compression_imgs/prune_group.png"/>
+  <img width="100%" src="{{page.src}}/prune_group.png"/>
   <div class="caption">Figure 2. Illustration of Pruning Weight Groups / Neurons / Filters.</div>
 </div>
 
@@ -37,7 +41,7 @@ In this work, we try to compress the network in all the three aspects. Basically
 <p>We first interpret feed forward networks as a Markov chain, as shown in Figure 3(a). The input is $x$ while the target output (usually the label) is $y$. The hidden layers are denoted as $h_1, h_2, ..., h_L$ where $L$ is the number of layers. Sometimes we also denote the input layer as $h_0$ for convenience. The $i$-th layer defines the probability distribution $p(h_i|h_{i-1})$. If this distribution becomes a Dirac-delta function, then the network becomes deterministic. In the proposed model, we consider non-degenerate distributions of $p(h_i|h_{i-1})$. The last layer approximates $p(y|h_L)$ via some tractable alternative $p(\hat{y}|h_L)$. In the network, each layer extracts information from its previous layer. The last layer uses the information it extracted to give the prediction. Intuitively speaking, the more useful information it extracted, the higher predicting accuracy it will be.</p>
 
 <div align="center">
-  <img width="100%" src="/blogs/20180720_icml2018_compression_imgs/markov_chain.png"/>
+  <img width="100%" src="{{page.src}}/markov_chain.png"/>
   <div class="caption">Figure 3.</div>
 </div>
 
@@ -57,6 +61,21 @@ where $\gamma_i$ is a hyper parameter that controls the bottleneck strength. If 
 </p>
 
 <h3 id="objective">4. Objective Derivation</h3>
+<p>The layer-wise energy defined above is often intractable in a deep neural network. So instead of optimizing it directly, we optimize an upper bound of it. Basically we use variational distributions which can be defined by the network to approximate the true distributions and obtain the upper bound according to Jensen's inequalicy. Take the mutual information between $h_i$ and $h_{i-1}$ for example, we have
+$$\begin{align}I(h_i;h_{i-1}) &= \int p(h_i,h_{i-1}) \log \frac{p(h_i,h_{i-1})}{p(h_i)p(h_{i-1})} dh_i dh_{i-1} \\
+ &= \int p(h_{i-1}) p(h_i|h_{i-1}) \log \frac{p(h_i|h_{i-1})}{p(h_i)} dh_i dh_{i-1} \\
+ &\le \mathbb{E}_{h_{i-1}\sim p(h_{i-1})} \left[ \mathbb{KL}\left[ p(h_i|h_{i-1}) || q(h_i) \right] \right]. \end{align}$$
+The inequality comes from Jesen's inequality by replacing $p(h_i)$ with a variational distribution $q(h_i)$ and it holds for any kind of distribution. The final upper bound is
+$$\begin{align} \tilde{\mathcal{L}}_i = & \gamma_i \mathbb{E}_{\{x,y\}\sim\mathcal{D}, h_i \sim p(h_i|x)} \left[ \mathbb{KL}\left[ p(h_i|h_{i-1}) || q(h_i) \right] \right] \\
+ & -\mathbb{E}_{\{x,y\}\sim\mathcal{D}, h\sim p(h|x)} \left[ \log q(y|h_L) \right], \end{align}$$
+where $\mathcal{D}$ is the data distribution and $h$ stands for the union of $h_1, h_2, ..., h_L$.</p>
+
+<p>We then need to specify the parameterization of the probability distributions in the upper bound. More specifically, we need to parameterize three distributions: $p(h_i|h_{i-1})$, $q(h_i)$ and $q(y|h_L)$. For other distributions in the upper bound, $\mathcal{D}$ is the groundtruth distribution of the given dataset, $p(h_i|x)$ (or $p(h_i|h_0)$) can be written as the marginalization of $\Pi_{j=1}^{i} p(h_j|h_{j-1})$ while $p(h|x)$ can be simply written as $\Pi_{j=1}^{L} p(h_j|h_{j-1})$.</p>
+
+<p>The parameterization of $q(y|h_L)$ is quite straight-forward. It is a multinomial distribution for a classification task and produces a cross-entropy loss. For a regression task, it becomes a Gaussian distribution and gives a Euclidean loss. We define both $p(h_i|h_{i-1})$ and $q(h_i)$ as Gaussian distributions as follows
+$$\begin{align} p(h_i|h_{i-1}) &\sim \mathcal{N} \left(f_i(h_{i-1})\odot\mu_i, \text{diag}\left[ f_i(h_{i-1})^2\odot\sigma_i^2 \right] \right), \\
+q(h_i) &\sim \mathcal{N} \left( 0, \text{diag}\left[ \xi_i \right] \right). \end{align}$$
+</p>
 
 <h3 id="theory">5. Theoretical Analysis</h3>
 

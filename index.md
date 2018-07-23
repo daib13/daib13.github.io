@@ -8,7 +8,7 @@ layout: default
 
 <p>My research interests include generative model, sparse learning and deep learning. Now I am working on projects in analyzing the properties of variational autoencoder (VAE), which is a popular generative model, both theoretically and empirically.</p>
 
-I completed my BS in physics at Tsinghua University in 2013. I worked with <a href="https://www.astro.ucsc.edu/faculty/profiles/singleton.php?&singleton=true&cruz_id=dnlin">Douglas Lin</a> on the theory of planet formation and evolution from 2011 to 2014. In the first year of my Ph.D., I switched my research field to computer science. I worked with <a href="https://www.microsoft.com/en-us/research/people/baoyuanw/">Baoyuan Wang</a> on action recognition and highlight detection. Then I was supervised by <a href="http://ganghua.org/">Gang Hua</a> on projects of unsupervised learning and clustering.
+I completed my BS in physics at Tsinghua University in 2013. I worked with <a href="https://www.astro.ucsc.edu/faculty/singleton.php?&singleton=true&cruz_id=dnlin">Douglas Lin</a> on the theory of planet formation and evolution from 2011 to 2014. In the first year of my Ph.D., I switched my research field to computer science. I worked with <a href="https://www.microsoft.com/en-us/research/people/baoyuanw/">Baoyuan Wang</a> on action recognition and highlight detection. Then I was supervised by <a href="http://ganghua.org/">Gang Hua</a> on projects of unsupervised learning and clustering.
 
 # [](#header-1)Publications
 
