@@ -61,6 +61,7 @@ where $\gamma_i$ is a hyper parameter that controls the bottleneck strength. If 
 </p>
 
 <h3 id="objective">4. Objective Derivation</h3>
+<h4>4.1 Upper Bound</h4>
 <p>The layer-wise energy defined above is often intractable in a deep neural network. So instead of optimizing it directly, we optimize an upper bound of it. Basically we use variational distributions which can be defined by the network to approximate the true distributions and obtain the upper bound according to Jensen's inequalicy. Take the mutual information between $h_i$ and $h_{i-1}$ for example, we have
 $$\begin{align}I(h_i;h_{i-1}) &= \int p(h_i,h_{i-1}) \log \frac{p(h_i,h_{i-1})}{p(h_i)p(h_{i-1})} dh_i dh_{i-1} \\
  &= \int p(h_{i-1}) p(h_i|h_{i-1}) \log \frac{p(h_i|h_{i-1})}{p(h_i)} dh_i dh_{i-1} \\
@@ -70,12 +71,29 @@ $$\begin{align} \tilde{\mathcal{L}}_i = & \gamma_i \mathbb{E}_{\{x,y\}\sim\mathc
  & -\mathbb{E}_{\{x,y\}\sim\mathcal{D}, h\sim p(h|x)} \left[ \log q(y|h_L) \right], \end{align}$$
 where $\mathcal{D}$ is the data distribution and $h$ stands for the union of $h_1, h_2, ..., h_L$.</p>
 
+<h4>4.2 Parameterization</h4>
 <p>We then need to specify the parameterization of the probability distributions in the upper bound. More specifically, we need to parameterize three distributions: $p(h_i|h_{i-1})$, $q(h_i)$ and $q(y|h_L)$. For other distributions in the upper bound, $\mathcal{D}$ is the groundtruth distribution of the given dataset, $p(h_i|x)$ (or $p(h_i|h_0)$) can be written as the marginalization of $\Pi_{j=1}^{i} p(h_j|h_{j-1})$ while $p(h|x)$ can be simply written as $\Pi_{j=1}^{L} p(h_j|h_{j-1})$.</p>
 
 <p>The parameterization of $q(y|h_L)$ is quite straight-forward. It is a multinomial distribution for a classification task and produces a cross-entropy loss. For a regression task, it becomes a Gaussian distribution and gives a Euclidean loss. We define both $p(h_i|h_{i-1})$ and $q(h_i)$ as Gaussian distributions as follows
 $$\begin{align} p(h_i|h_{i-1}) &\sim \mathcal{N} \left(f_i(h_{i-1})\odot\mu_i, \text{diag}\left[ f_i(h_{i-1})^2\odot\sigma_i^2 \right] \right), \\
 q(h_i) &\sim \mathcal{N} \left( 0, \text{diag}\left[ \xi_i \right] \right). \end{align}$$
+Here $f_i(\cdot)$ is a deterministic transformation. In practice, it is usually a concatenation of a fully connected / convolution layer, a batch normalization layer and an activation layer (see Figure 4). $\odot$ stands for element-wise product. $\mu_i$ and $\sigma_i$ are two free parameters which have the same dimension as the corresponding layer. If we fix $\mu_i$ to be $1$ and $\sigma_i$ to be $0$, then $p(h_i|h_{i-1})$ degenerates to a Dirac-delta function spiking at $f_i(h_{i-1})$ and the network becomes a regular one. </p>
+<p>$q(h_i)$ is also a Gaussian distribution with zero mean and a learnable covariance $\xi_i$. <strong>Such a prior can help promote the sparsity and aggregate the information to part of the neurons rather than distribute the information to all the neurons [2].</strong> For example, if the covariance of the $j$-th dimension ($\xi_{i,j}$) becomes $0$, the corresponding $p(h_{i,j}|h_{i-1})$ will also be a Dirac-delta function spiking at $0$ otherwise it will produce an infinite large KL divergence. Intuitively speaking that dimension can be safely removed.
 </p>
+
+<h4>4.3 Approximation</h4>
+<p>Since both $p(h_i|h_{i-1})$ and $q(h_i)$ are Gaussian distributions, the KL divergence between them can be written in a closed form. Moreover, we can optimize $\xi_i$ out of the model rather than learn it inside the network. After some simple derivations, we obtain
+$$\begin{align} & \inf_{\xi_i \succ 0} \mathbb{E}_{h_{i-1} \sim p(h_{i-1})} \left[ \mathbb{KL} \left[ p(h_i|h_{i-1}) || q(h_i) \right] \right] \\
+\equiv & \sum_j \left[ \log\left(1+\frac{\mu_{i,j}^2}{\sigma_{i,j}^2}\right) + \psi_{i,j} \right], \end{align}$$
+where $\psi_{i,j}$ is a non-negative value. For the sake of optimization convenience, we omit this term and our final objective becomes
+<strong>$$\tilde{\mathcal{L}} = \sum_i \gamma_i \sum_j \log\left(1+\frac{\mu_{i,j}^2}{\sigma_{i,j}^2}\right) -L \mathbb{E}_{\{x,y\}\sim\mathcal{D},h\sim p(h|x)} \left[ \log q(y|h_L) \right].$$</strong>
+This objective is composed of two terms: a regularization term that tries to compress the neural network and a data term that tries to fit the data distribution. More interestingly, the regularization is only related to the extra parameters $\mu_{i,j}$ and $\sigma_{i,j}$ but not related to the parameters in $f_i(\cdot)$, which makes the implementation much easier. The $i$-th layer structure is shown in Figure 4.
+</p>
+
+<div align="center">
+  <img width="100%" src="{{page.src}}/structure.png"/>
+  <div class="caption">Figure 4. Network Structure of the $i$-th Layer.</div>
+</div>
 
 <h3 id="theory">5. Theoretical Analysis</h3>
 
@@ -91,4 +109,5 @@ q(h_i) &\sim \mathcal{N} \left( 0, \text{diag}\left[ \xi_i \right] \right). \end
 </div>
 
 <h4 id="reference">Reference</h4>
-[1] Tishby, N., Pereira, F. C., and Bialek, W. The information bottleneck method. arXiv:physics/0004057, 2000.
+[1] Tishby, N., Pereira, F. C., and Bialek, W. The information bottleneck method. arXiv:physics/0004057, 2000.<br/>
+[2] Tipping M E. Sparse Bayesian learning and the relevance vector machine[J]. Journal of machine learning research, 2001, 1(Jun): 211-244.
