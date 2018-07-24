@@ -211,6 +211,11 @@ textarea[disabled] {
   padding-top: 10px;
 }
 
+.MJXc-display {
+  overflow: auto;
+  display: box
+}
+
 @media print, screen and (max-width: 1280x) {
 
   div.wrapper {
