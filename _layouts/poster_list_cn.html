@@ -3,12 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>{{ site.title }}</title>
+    <title>{{ page.title }}</title>
 
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <meta name="viewport" content="width=device-width">
-    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -17,15 +21,16 @@
     <div class="wrapper">
       <header>
         <div width="100%" align="center"><img src='/images/profile/portrait.jpg'></div>
-        <h1 align="center">Bin Dai</h1>
-        <p class="nomargin">Ph.D. candidate</p>
-        <p class="nomargin">Institute for Advanced Study (IAS)</p>
-        <p class="nomargin">Tsinghua University (THU)</p>
-        <p class="nomargin">Contact: <a href="mailto:daib09physics@gmail.com">daib09physics@gmail.com</a></p>
+        <h1 align="center">戴彬</h1>
+        <p class="nomargin">博士研究生</p>
+        <p class="nomargin">高等研究院 (IAS)</p>
+        <p class="nomargin">清华大学 (THU)</p>
+        <p class="nomargin">联系: <a href="mailto:daib09physics@gmail.com">daib09physics@gmail.com</a></p>
         <p> </p>
-        <p>Go to <a href="index_posters">posters</a>.</p>
+        <p><a href="/index_cn">首页</a></br>
+          <a href="/index_posters_cn">博客</a></p>
         <p> </p>
-        <p><a href="/index">English</a>&nbsp;&nbsp;<a href="/index_cn">中文</a></p>
+        <p><a href="{{ page.en }}">English</a>&nbsp;&nbsp;<a href="{{ page.cn }}">中文</a></p>
       </header>
 
       <section>
@@ -34,9 +39,10 @@
 
       </section>
       <footer>
-        <span id="busuanzi_container_site_uv">
-          <i class="fa fa-eye"></i>&nbsp;<span id="busuanzi_value_site_uv"></span>
-        </span>
+        <!--form>
+          Message: <textarea disabled>Will be available soon</textarea> 
+          <input type="reset" value="Reset" /><input type="submit" value="Submit" />
+        </form-->
       </footer>
     </div>
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>

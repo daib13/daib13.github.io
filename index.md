@@ -6,9 +6,9 @@ layout: default
 
 <p>I am currently a Ph.D. student of the Institute for Advanced Study (IAS), Tsinghua University (THU). I am also under the joint Ph.D. program between THU and <a href="http://www.msra.cn/zh-cn/default.aspx">Microsoft Research Asia (MSRA)</a>. My supervisors are <a href="http://www.microsoft.com/en-us/research/people/bainguo/">Baining Guo</a> and <a href="http://www.davidwipf.com/">David Wipf.</a></p>
 
-<p>My research interests include generative model, sparse learning and deep learning. Now I am working on projects in analyzing the properties of variational autoencoder (VAE), which is a popular generative model, both theoretically and empirically.</p>
+<p>My research interests include generative model, sparse learning and network compression. Now I am working on projects in analyzing the properties of variational autoencoder (VAE), which is a popular generative model, both theoretically and empirically.</p>
 
-I completed my BS in physics at Tsinghua University in 2013. I worked with <a href="https://www.astro.ucsc.edu/faculty/singleton.php?&singleton=true&cruz_id=dnlin">Douglas Lin</a> on the theory of planet formation and evolution from 2011 to 2014. In the first year of my Ph.D., I switched my research field to computer science. I worked with <a href="https://www.microsoft.com/en-us/research/people/baoyuanw/">Baoyuan Wang</a> on action recognition and highlight detection. Then I was supervised by <a href="http://ganghua.org/">Gang Hua</a> on projects of unsupervised learning and clustering.
+<p>I completed my BS in physics at Tsinghua University in 2013. I worked with <a href="https://www.astro.ucsc.edu/faculty/singleton.php?&singleton=true&cruz_id=dnlin">Douglas Lin</a> on the theory of planet formation and evolution from 2011 to 2014. In the first year of my Ph.D., I switched my research field to computer science. I worked with <a href="https://www.microsoft.com/en-us/research/people/baoyuanw/">Baoyuan Wang</a> on action recognition and highlight detection. Then I was supervised by <a href="http://ganghua.org/">Gang Hua</a> on projects of unsupervised learning and clustering.</p>
 
 # [](#header-1)Publications
 

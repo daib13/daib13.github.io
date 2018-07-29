@@ -1,7 +1,7 @@
 ---
-layout: poster_list
-title: Compressing Neural Networks Using the Variational Information Bottleneck
-categories: projects
+layout: poster_list_cn
+title: 基于变分信息瓶颈的神经网络压缩（Compressing Neural Networks Using the Variational Information Bottleneck）
+categories: projects_cn
 src: /blogs/20180720_icml2018_compression_imgs
 en: /projects/2018/07/20/icml2018-compression
 cn: /projects_cn/2018/07/20/icml2018-compression-cn

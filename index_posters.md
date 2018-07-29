@@ -1,6 +1,8 @@
 ---
 layout: poster_list
-title: Posters
+title: Bin Dai's Posters
+en: /index_posters
+cn: /index_posters_cn
 ---
 
 # [](#header-1)My Projects
